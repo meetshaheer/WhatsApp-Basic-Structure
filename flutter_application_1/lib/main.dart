@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/home_view.dart';
 
 void main(List<String> args) {
-  runApp(myApp());
+  runApp(const myApp());
 }
 
 class myApp extends StatelessWidget {
@@ -9,6 +10,8 @@ class myApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const MaterialApp(
+      home: home_view(),
+    );
   }
 }
