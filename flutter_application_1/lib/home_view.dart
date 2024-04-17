@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/src/painting/colors.dart';
 
 // ignore: camel_case_types
 class home_view extends StatelessWidget {
@@ -33,9 +34,9 @@ class home_view extends StatelessWidget {
             )
           ],
         ),
-        body: const Column(
+        body: Column(
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(top: 20),
               child: Row(
                 children: [
@@ -58,7 +59,7 @@ class home_view extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(top: 25),
               child: Row(
                 children: [
@@ -84,7 +85,7 @@ class home_view extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(top: 30),
               child: ListTile(
-                leading: Padding(
+                leading: const Padding(
                   padding: EdgeInsets.only(left: 0),
                   child: CircleAvatar(
                     radius: 25,
@@ -92,9 +93,31 @@ class home_view extends StatelessWidget {
                     child: Text("AH"),
                   ),
                 ),
-                title: Text(
-                  "Usman Ansari",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                title: const Text(
+                  "Test (You)",
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+                subtitle: Text(
+                  "When you reached at Cubix?",
+                  style: TextStyle(color: Colors.grey[600]),
+                ),
+                trailing: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 15),
+                      child: Text(
+                        "8:45 pm",
+                        style: TextStyle(color: Colors.grey[600]),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20),
+                      child: Icon(
+                        Icons.keyboard_backspace_sharp,
+                        color: Colors.grey[600],
+                      ),
+                    )
+                  ],
                 ),
               ),
             )
