@@ -7,18 +7,25 @@ class home_view extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("WhatsApp"),
+          title: const Text(
+            "WhatsApp",
+            style: TextStyle(fontWeight: FontWeight.w400),
+          ),
           foregroundColor: Colors.white,
           backgroundColor: Colors.teal[700],
           actions: const [
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(right: 20),
+                  padding: EdgeInsets.only(right: 15),
                   child: Icon(Icons.photo_camera),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(right: 10),
+                  padding: EdgeInsets.only(right: 15),
+                  child: Icon(Icons.search),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(right: 15),
                   child: Icon(Icons.more_vert),
                 )
               ],
@@ -40,7 +47,7 @@ class home_view extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 25, top: 3),
+                    padding: EdgeInsets.only(left: 28, top: 3),
                     child: Text(
                       "Archived",
                       style:
