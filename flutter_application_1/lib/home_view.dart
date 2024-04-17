@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class home_view extends StatelessWidget {
   const home_view({super.key});
 
@@ -41,6 +42,29 @@ class home_view extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(left: 25.0),
                     child: Icon(
+                      Icons.lock_person,
+                      size: 22,
+                      color: Colors.teal,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 28, top: 3),
+                    child: Text(
+                      "Locked Chats",
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 35),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 25.0),
+                    child: Icon(
                       Icons.move_to_inbox,
                       size: 22,
                       color: Colors.teal,
@@ -55,6 +79,12 @@ class home_view extends StatelessWidget {
                     ),
                   )
                 ],
+              ),
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                radius: 30,
+                backgroundColor: Colors.green,
               ),
             )
           ],
