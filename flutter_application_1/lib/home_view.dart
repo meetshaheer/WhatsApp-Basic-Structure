@@ -59,7 +59,7 @@ class home_view extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 35),
+              padding: EdgeInsets.only(top: 25),
               child: Row(
                 children: [
                   Padding(
@@ -81,10 +81,21 @@ class home_view extends StatelessWidget {
                 ],
               ),
             ),
-            ListTile(
-              leading: CircleAvatar(
-                radius: 30,
-                backgroundColor: Colors.green,
+            Padding(
+              padding: EdgeInsets.only(top: 30),
+              child: ListTile(
+                leading: Padding(
+                  padding: EdgeInsets.only(left: 0),
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.green,
+                    child: Text("AH"),
+                  ),
+                ),
+                title: Text(
+                  "Usman Ansari",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
             )
           ],
