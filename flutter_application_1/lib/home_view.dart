@@ -34,242 +34,979 @@ class home_view extends StatelessWidget {
             )
           ],
         ),
-        body: Column(
-          children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 20),
-              child: Row(
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 25.0),
-                    child: Icon(
-                      Icons.lock_person,
-                      size: 22,
-                      color: Colors.teal,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 25.0),
+                      child: Icon(
+                        Icons.lock_person,
+                        size: 22,
+                        color: Colors.teal,
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 28, top: 3),
-                    child: Text(
-                      "Locked Chats",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-                    ),
-                  )
-                ],
+                    Padding(
+                      padding: EdgeInsets.only(left: 28, top: 3),
+                      child: Text(
+                        "Locked Chats",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 30),
-              child: Row(
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(left: 25.0),
-                    child: Icon(
-                      Icons.move_to_inbox,
-                      size: 22,
-                      color: Colors.teal,
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(left: 25.0),
+                      child: Icon(
+                        Icons.move_to_inbox,
+                        size: 22,
+                        color: Colors.teal,
+                      ),
                     ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(left: 28, top: 1),
-                    child: Text(
-                      "Archived",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                    const Padding(
+                      padding: EdgeInsets.only(left: 28, top: 1),
+                      child: Text(
+                        "Archived",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
+                      ),
                     ),
-                  ),
-                  const Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 26, top: 6),
+                    const Spacer(),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 26, top: 6),
+                      child: CircleAvatar(
+                        radius: 11,
+                        backgroundColor: Colors.white,
+                        child: Text(
+                          "2",
+                          style:
+                              TextStyle(color: Colors.green[600], fontSize: 12),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 17),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
                     child: CircleAvatar(
-                      radius: 11,
-                      backgroundColor: Colors.white,
-                      child: Text(
-                        "2",
-                        style:
-                            TextStyle(color: Colors.green[600], fontSize: 12),
-                      ),
+                      radius: 25,
+                      backgroundColor: Colors.amber[100],
+                      child: const Text("AH"),
                     ),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 17),
-              child: ListTile(
-                leading: Padding(
-                  padding: const EdgeInsets.only(left: 0),
-                  child: CircleAvatar(
-                    radius: 25,
-                    backgroundColor: Colors.amber[100],
-                    child: const Text("AH"),
+                  ),
+                  title: const Text(
+                    "Test (You)",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "When you reached at Cubix?",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "8:45 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Icon(
+                          Icons.push_pin,
+                          color: Colors.grey[600],
+                        ),
+                      )
+                    ],
                   ),
                 ),
-                title: const Text(
-                  "Test (You)",
-                  style: TextStyle(fontWeight: FontWeight.w500),
-                ),
-                subtitle: Text(
-                  "When you reached at Cubix?",
-                  style: TextStyle(color: Colors.grey[600]),
-                ),
-                trailing: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Text(
-                        "8:45 pm",
-                        style: TextStyle(
-                            color: Colors.grey[900],
-                            fontWeight: FontWeight.w300,
-                            fontSize: 12),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 30),
-                      child: Icon(
-                        Icons.push_pin,
-                        color: Colors.grey[600],
-                      ),
-                    )
-                  ],
-                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 6),
-              child: ListTile(
-                leading: Padding(
-                  padding: const EdgeInsets.only(left: 0),
-                  child: CircleAvatar(
-                    radius: 25,
-                    backgroundColor: Colors.cyan[100],
-                    child: const Text("HE"),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.cyan[100],
+                      child: const Text("HE"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Free IT Courses Material",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "~s.a: IELTS Band 7+ Complete Trai..",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "8:45 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Icon(
+                          Icons.push_pin,
+                          color: Colors.grey[600],
+                        ),
+                      )
+                    ],
                   ),
                 ),
-                title: const Text(
-                  "Free IT Courses Material",
-                  style: TextStyle(fontWeight: FontWeight.w500),
-                ),
-                subtitle: Text(
-                  "~s.a: IELTS Band 7+ Complete Trai..",
-                  style: TextStyle(color: Colors.grey[600]),
-                ),
-                trailing: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Text(
-                        "8:45 pm",
-                        style: TextStyle(
-                            color: Colors.grey[900],
-                            fontWeight: FontWeight.w300,
-                            fontSize: 12),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 30),
-                      child: Icon(
-                        Icons.push_pin,
-                        color: Colors.grey[600],
-                      ),
-                    )
-                  ],
-                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 6),
-              child: ListTile(
-                leading: Padding(
-                  padding: const EdgeInsets.only(left: 0),
-                  child: CircleAvatar(
-                    radius: 25,
-                    backgroundColor: Colors.teal[50],
-                    child: const Text("FL"),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.teal[50],
+                      child: const Text("FL"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Flutter KHI",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Ready Karachities! For KHI Bootcamp",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "3:45 pm",
+                          style: TextStyle(
+                              color: Colors.green[600],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 28, top: 3),
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.green[600],
+                            child: const Text(
+                              "3",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ))
+                    ],
                   ),
                 ),
-                title: const Text(
-                  "Flutter KHI",
-                  style: TextStyle(fontWeight: FontWeight.w500),
-                ),
-                subtitle: Text(
-                  "Ready Karachities! For KHI Bootcamp",
-                  style: TextStyle(color: Colors.grey[600]),
-                ),
-                trailing: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Text(
-                        "8:45 pm",
-                        style: TextStyle(
-                            color: Colors.green[600],
-                            fontWeight: FontWeight.w300,
-                            fontSize: 12),
-                      ),
-                    ),
-                    Padding(
-                        padding: const EdgeInsets.only(left: 28, top: 3),
-                        child: CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.green[600],
-                          child: const Text(
-                            "3",
-                            style: TextStyle(fontSize: 12, color: Colors.white),
-                          ),
-                        ))
-                  ],
-                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 6),
-              child: ListTile(
-                leading: Padding(
-                  padding: const EdgeInsets.only(left: 0),
-                  child: CircleAvatar(
-                    radius: 25,
-                    backgroundColor: Colors.cyanAccent[100],
-                    child: const Text("FL"),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.cyanAccent[100],
+                      child: const Text("UX"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Client USA",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Uxa! I'm still waiting for payment.",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "2:30 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                title: const Text(
-                  "Flutter KHI",
-                  style: TextStyle(fontWeight: FontWeight.w500),
-                ),
-                subtitle: Text(
-                  "Ready Karachities! For KHI Bootcamp",
-                  style: TextStyle(color: Colors.grey[600]),
-                ),
-                trailing: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Text(
-                        "2:30 pm",
-                        style: TextStyle(
-                            color: Colors.green[600],
-                            fontWeight: FontWeight.w300,
-                            fontSize: 12),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.purple[700],
+                      child: const Text(
+                        "AM",
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    Padding(
-                        padding: const EdgeInsets.only(left: 28, top: 3),
-                        child: CircleAvatar(
-                          radius: 10,
-                          backgroundColor: Colors.green[600],
-                          child: const Text(
-                            "9",
-                            style: TextStyle(fontSize: 12, color: Colors.white),
-                          ),
-                        ))
-                  ],
+                  ),
+                  title: const Text(
+                    "Lovely MOM",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Mom! I'm on the way, Prepare my ...",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "1:30 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.deepPurple[200],
+                      child: const Text("JK"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Jimmy",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "The soft patter of raindrops on the ...",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "1:22 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 28, top: 3),
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.green[600],
+                            child: const Text(
+                              "12",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.teal[50],
+                      child: const Text("FL"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Flutter KHI",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Ready Karachities! For KHI Bootcamp",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "3:45 pm",
+                          style: TextStyle(
+                              color: Colors.green[600],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 28, top: 3),
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.green[600],
+                            child: const Text(
+                              "3",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.cyanAccent[100],
+                      child: const Text("UX"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Client USA",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Uxa! I'm still waiting for payment.",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "2:30 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.purple[700],
+                      child: const Text(
+                        "AM",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  title: const Text(
+                    "Lovely MOM",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Mom! I'm on the way, Prepare my ...",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "1:30 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.deepPurple[200],
+                      child: const Text("JK"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Jimmy",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "The soft patter of raindrops on the ...",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "1:22 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 28, top: 3),
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.green[600],
+                            child: const Text(
+                              "12",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.teal[50],
+                      child: const Text("FL"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Flutter KHI",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Ready Karachities! For KHI Bootcamp",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "3:45 pm",
+                          style: TextStyle(
+                              color: Colors.green[600],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 28, top: 3),
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.green[600],
+                            child: const Text(
+                              "3",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.cyanAccent[100],
+                      child: const Text("UX"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Client USA",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Uxa! I'm still waiting for payment.",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "2:30 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.purple[700],
+                      child: const Text(
+                        "AM",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  title: const Text(
+                    "Lovely MOM",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Mom! I'm on the way, Prepare my ...",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "1:30 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.deepPurple[200],
+                      child: const Text("JK"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Jimmy",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "The soft patter of raindrops on the ...",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "1:22 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 28, top: 3),
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.green[600],
+                            child: const Text(
+                              "12",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.teal[50],
+                      child: const Text("FL"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Flutter KHI",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Ready Karachities! For KHI Bootcamp",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "3:45 pm",
+                          style: TextStyle(
+                              color: Colors.green[600],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 28, top: 3),
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.green[600],
+                            child: const Text(
+                              "3",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.cyanAccent[100],
+                      child: const Text("UX"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Client USA",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Uxa! I'm still waiting for payment.",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "2:30 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.purple[700],
+                      child: const Text(
+                        "AM",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  title: const Text(
+                    "Lovely MOM",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Mom! I'm on the way, Prepare my ...",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "1:30 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.deepPurple[200],
+                      child: const Text("JK"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Jimmy",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "The soft patter of raindrops on the ...",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "1:22 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 28, top: 3),
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.green[600],
+                            child: const Text(
+                              "12",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.teal[50],
+                      child: const Text("FL"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Flutter KHI",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Ready Karachities! For KHI Bootcamp",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "3:45 pm",
+                          style: TextStyle(
+                              color: Colors.green[600],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 28, top: 3),
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.green[600],
+                            child: const Text(
+                              "3",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.cyanAccent[100],
+                      child: const Text("UX"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Client USA",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Uxa! I'm still waiting for payment.",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "2:30 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.purple[700],
+                      child: const Text(
+                        "AM",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  title: const Text(
+                    "Lovely MOM",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "Mom! I'm on the way, Prepare my ...",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "1:30 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: ListTile(
+                  leading: Padding(
+                    padding: const EdgeInsets.only(left: 0),
+                    child: CircleAvatar(
+                      radius: 25,
+                      backgroundColor: Colors.deepPurple[200],
+                      child: const Text("JK"),
+                    ),
+                  ),
+                  title: const Text(
+                    "Jimmy",
+                    style: TextStyle(fontWeight: FontWeight.w500),
+                  ),
+                  subtitle: Text(
+                    "The soft patter of raindrops on the ...",
+                    style: TextStyle(color: Colors.grey[600]),
+                  ),
+                  trailing: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          "1:22 pm",
+                          style: TextStyle(
+                              color: Colors.grey[900],
+                              fontWeight: FontWeight.w300,
+                              fontSize: 12),
+                        ),
+                      ),
+                      Padding(
+                          padding: const EdgeInsets.only(left: 28, top: 3),
+                          child: CircleAvatar(
+                            radius: 10,
+                            backgroundColor: Colors.green[600],
+                            child: const Text(
+                              "12",
+                              style:
+                                  TextStyle(fontSize: 12, color: Colors.white),
+                            ),
+                          ))
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ));
   }
 }
