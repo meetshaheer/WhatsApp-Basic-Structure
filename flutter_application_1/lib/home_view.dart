@@ -59,11 +59,11 @@ class home_view extends StatelessWidget {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 25),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
               child: Row(
                 children: [
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 25.0),
                     child: Icon(
                       Icons.move_to_inbox,
@@ -71,26 +71,39 @@ class home_view extends StatelessWidget {
                       color: Colors.teal,
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 28, top: 3),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 28, top: 1),
                     child: Text(
                       "Archived",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  const Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 26, top: 6),
+                    child: CircleAvatar(
+                      radius: 11,
+                      backgroundColor: Colors.white,
+                      child: Text(
+                        "2",
+                        style:
+                            TextStyle(color: Colors.green[600], fontSize: 12),
+                      ),
                     ),
                   )
                 ],
               ),
             ),
             Padding(
-              padding: EdgeInsets.only(top: 30),
+              padding: const EdgeInsets.only(top: 17),
               child: ListTile(
-                leading: const Padding(
-                  padding: EdgeInsets.only(left: 0),
+                leading: Padding(
+                  padding: const EdgeInsets.only(left: 0),
                   child: CircleAvatar(
                     radius: 25,
-                    backgroundColor: Colors.green,
-                    child: Text("AH"),
+                    backgroundColor: Colors.amber[100],
+                    child: const Text("AH"),
                   ),
                 ),
                 title: const Text(
@@ -104,23 +117,158 @@ class home_view extends StatelessWidget {
                 trailing: Column(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 15),
+                      padding: const EdgeInsets.only(top: 10),
                       child: Text(
                         "8:45 pm",
-                        style: TextStyle(color: Colors.grey[600]),
+                        style: TextStyle(
+                            color: Colors.grey[900],
+                            fontWeight: FontWeight.w300,
+                            fontSize: 12),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 20),
+                      padding: const EdgeInsets.only(left: 30),
                       child: Icon(
-                        Icons.keyboard_backspace_sharp,
+                        Icons.push_pin,
                         color: Colors.grey[600],
                       ),
                     )
                   ],
                 ),
               ),
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 6),
+              child: ListTile(
+                leading: Padding(
+                  padding: const EdgeInsets.only(left: 0),
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.cyan[100],
+                    child: const Text("HE"),
+                  ),
+                ),
+                title: const Text(
+                  "Free IT Courses Material",
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+                subtitle: Text(
+                  "~s.a: IELTS Band 7+ Complete Trai..",
+                  style: TextStyle(color: Colors.grey[600]),
+                ),
+                trailing: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text(
+                        "8:45 pm",
+                        style: TextStyle(
+                            color: Colors.grey[900],
+                            fontWeight: FontWeight.w300,
+                            fontSize: 12),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30),
+                      child: Icon(
+                        Icons.push_pin,
+                        color: Colors.grey[600],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 6),
+              child: ListTile(
+                leading: Padding(
+                  padding: const EdgeInsets.only(left: 0),
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.teal[50],
+                    child: const Text("FL"),
+                  ),
+                ),
+                title: const Text(
+                  "Flutter KHI",
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+                subtitle: Text(
+                  "Ready Karachities! For KHI Bootcamp",
+                  style: TextStyle(color: Colors.grey[600]),
+                ),
+                trailing: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text(
+                        "8:45 pm",
+                        style: TextStyle(
+                            color: Colors.green[600],
+                            fontWeight: FontWeight.w300,
+                            fontSize: 12),
+                      ),
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.only(left: 28, top: 3),
+                        child: CircleAvatar(
+                          radius: 10,
+                          backgroundColor: Colors.green[600],
+                          child: const Text(
+                            "3",
+                            style: TextStyle(fontSize: 12, color: Colors.white),
+                          ),
+                        ))
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 6),
+              child: ListTile(
+                leading: Padding(
+                  padding: const EdgeInsets.only(left: 0),
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.cyanAccent[100],
+                    child: const Text("FL"),
+                  ),
+                ),
+                title: const Text(
+                  "Flutter KHI",
+                  style: TextStyle(fontWeight: FontWeight.w500),
+                ),
+                subtitle: Text(
+                  "Ready Karachities! For KHI Bootcamp",
+                  style: TextStyle(color: Colors.grey[600]),
+                ),
+                trailing: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Text(
+                        "2:30 pm",
+                        style: TextStyle(
+                            color: Colors.green[600],
+                            fontWeight: FontWeight.w300,
+                            fontSize: 12),
+                      ),
+                    ),
+                    Padding(
+                        padding: const EdgeInsets.only(left: 28, top: 3),
+                        child: CircleAvatar(
+                          radius: 10,
+                          backgroundColor: Colors.green[600],
+                          child: const Text(
+                            "9",
+                            style: TextStyle(fontSize: 12, color: Colors.white),
+                          ),
+                        ))
+                  ],
+                ),
+              ),
+            ),
           ],
         ));
   }
